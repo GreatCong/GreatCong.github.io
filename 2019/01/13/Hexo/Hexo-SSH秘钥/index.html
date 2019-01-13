@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo-tale</title>
+  <title>Hexo输入SSH Key | Hexo-tale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-tale">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="设置 SSH 使用 Hexo deploy 时免输用户名密码 SSH 验证就是我们键入命令 hexo deploy 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。 当然，我们可以在电脑中设置SSH Key实现免密码输入。">
+<meta name="keywords" content="随笔,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo输入SSH Key">
+<meta property="og:url" content="http://yoursite.com/2019/01/13/Hexo/Hexo-SSH秘钥/index.html">
 <meta property="og:site_name" content="Hexo-tale">
+<meta property="og:description" content="设置 SSH 使用 Hexo deploy 时免输用户名密码 SSH 验证就是我们键入命令 hexo deploy 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。 当然，我们可以在电脑中设置SSH Key实现免密码输入。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-13T14:19:25.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-tale">
+<meta name="twitter:title" content="Hexo输入SSH Key">
+<meta name="twitter:description" content="设置 SSH 使用 Hexo deploy 时免输用户名密码 SSH 验证就是我们键入命令 hexo deploy 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。 当然，我们可以在电脑中设置SSH Key实现免密码输入。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-tale" type="application/atom+xml">
   
@@ -148,36 +153,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Hexo/Hexo-SSH秘钥" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Hexo输入SSH Key
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo-SSH秘钥/" class="archive-article-date">
+
+        
+        <a href="/2019/01/13/Hexo/Hexo-SSH秘钥/" class="archive-article-date">
   	<time datetime="2019-01-13T14:03:32.794Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo-SSH秘钥/">Hexo输入SSH Key</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="设置-SSH-使用-Hexo-deploy-时免输用户名密码"><a href="#设置-SSH-使用-Hexo-deploy-时免输用户名密码" class="headerlink" title="设置 SSH 使用 Hexo deploy 时免输用户名密码"></a>设置 SSH 使用 Hexo deploy 时免输用户名密码</h1><hr>
+<p>SSH 验证就是我们键入命令 <code>hexo deploy</code> 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。</p>
+<p>当然，我们可以在电脑中设置SSH Key实现免密码输入。</p>
+<a id="more"></a>
+<p>1.检查是否有SSH秘钥</p>
+<p>登陆github，点击头像位置处 Settings ——&gt; SSH and GPG keys ，查看是否有SSH keys。如果有，直接跳到第3步；如果没有，则继续。 </p>
+<p>2.新建SSH秘钥，执行命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮箱名"</span></span><br></pre></td></tr></table></figure>
+<p>然后出现</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/John/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
+<p>回车即可，之后会出现</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+<p>要求你输入密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。</p>
+<p>注意：输入密码的时候没有*字样的，直接输入就好。</p>
+<p>然后会出现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/John/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/John/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">65:69:······02:4b emailname@email.com</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+--[ RSA 2048]----+</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|       .   o .   |</span></span><br><span class="line"><span class="string">|    . o o = o    |</span></span><br><span class="line"><span class="string">|   . o * = o     |</span></span><br><span class="line"><span class="string">|  E  o + o .     |</span></span><br><span class="line"><span class="string">| . o.   . .      |</span></span><br><span class="line"><span class="string">|     ..          |</span></span><br><span class="line"><span class="string">+-----------------+</span></span><br></pre></td></tr></table></figure>
+<p>至此，密钥已经成功生成。 </p>
+<p>3.在github上添加SSH key</p>
+<p>此处有2种方法：</p>
+<ul>
+<li><p>在用户设置中添加密钥（Settings –&gt; SSH GPG keys）</p>
+</li>
+<li><p>在单个项目中添加密钥(在单个项目的首页菜单栏中点击 Settings –&gt; Deploy keys –&gt; Add deploy key，然后将生成的 id_rsa.pub 中的内容全选复制到 key 输入框中，然后点击 Add key 完成添加公钥。)</p>
+</li>
+</ul>
+<p>对于在用户设置中添加秘钥，具体操作如下：</p>
+<ul>
+<li>打开本地文件：id_rsa.pub（文件路径可以在上一步SSH生成成功后看到路径，比如我的是c/Users/John/.ssh/id_rsa.pub），可以将这个文件在编辑器中打开，然后全选复制。</li>
+<li>登陆github，点击头像位置处 Settings ——&gt; SSH and GPG keys ——&gt; New SSH key，点击新建SSH key。</li>
+<li>将之前复制的内容粘贴在key文本框里，title可以不用填（或者自己起一个名字也可以）。</li>
+</ul>
+<p>4.测试设置是否成功<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,224 +228,119 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo换电脑重新部署/" class="archive-article-date">
-  	<time datetime="2019-01-13T12:50:21.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo换电脑重新部署/">Hexo换电脑重新部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Hexo/Hexo插入图片/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:28:07.636Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Hexo/Hexo插入图片/">Hexo插入图片</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/13/Hexo/Hexo-SSH秘钥/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Marlin/Marlin study/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:04:04.303Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/13/Hexo/Hexo换电脑重新部署/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo换电脑重新部署</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Marlin/Marlin study/">Marlin study</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Marlin</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置-SSH-使用-Hexo-deploy-时免输用户名密码"><span class="toc-number">1.</span> <span class="toc-text">设置 SSH 使用 Hexo deploy 时免输用户名密码</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/29/github/problem for github install/" class="archive-article-date">
-  	<time datetime="2018-04-29T14:30:16.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-29</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/29/github/problem for github install/">GitHub for windows无法启动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/25/Hexo/hello-world/" class="archive-article-date">
-  	<time datetime="2018-04-25T13:49:24.106Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/25/Hexo/hello-world/">Hexo-test</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -433,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-13T13:23:59.134Z</updated>
+  <updated>2019-01-13T14:19:25.039Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo输入SSH Key</title>
+    <link href="http://yoursite.com/2019/01/13/Hexo/Hexo-SSH%E7%A7%98%E9%92%A5/"/>
+    <id>http://yoursite.com/2019/01/13/Hexo/Hexo-SSH秘钥/</id>
+    <published>2019-01-13T14:03:32.794Z</published>
+    <updated>2019-01-13T14:19:25.039Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设置-SSH-使用-Hexo-deploy-时免输用户名密码"><a href="#设置-SSH-使用-Hexo-deploy-时免输用户名密码" class="headerlink" title="设置 SSH 使用 Hexo deploy 时免输用户名密码"></a>设置 SSH 使用 Hexo deploy 时免输用户名密码</h1><hr><p>SSH 验证就是我们键入命令 <code>hexo deploy</code> 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。</p><p>当然，我们可以在电脑中设置SSH Key实现免密码输入。</p><a id="more"></a><p>1.检查是否有SSH秘钥</p><p>登陆github，点击头像位置处 Settings ——&gt; SSH and GPG keys ，查看是否有SSH keys。如果有，直接跳到第3步；如果没有，则继续。 </p><p>2.新建SSH秘钥，执行命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮箱名"</span></span><br></pre></td></tr></table></figure><p>然后出现</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/John/.ssh/id_rsa):</span><br></pre></td></tr></table></figure><p>回车即可，之后会出现</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure><p>要求你输入密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。</p><p>注意：输入密码的时候没有*字样的，直接输入就好。</p><p>然后会出现：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/John/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/John/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">65:69:······02:4b emailname@email.com</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+--[ RSA 2048]----+</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|       .   o .   |</span></span><br><span class="line"><span class="string">|    . o o = o    |</span></span><br><span class="line"><span class="string">|   . o * = o     |</span></span><br><span class="line"><span class="string">|  E  o + o .     |</span></span><br><span class="line"><span class="string">| . o.   . .      |</span></span><br><span class="line"><span class="string">|     ..          |</span></span><br><span class="line"><span class="string">+-----------------+</span></span><br></pre></td></tr></table></figure><p>至此，密钥已经成功生成。 </p><p>3.在github上添加SSH key</p><p>此处有2种方法：</p><ul><li><p>在用户设置中添加密钥（Settings –&gt; SSH GPG keys）</p></li><li><p>在单个项目中添加密钥(在单个项目的首页菜单栏中点击 Settings –&gt; Deploy keys –&gt; Add deploy key，然后将生成的 id_rsa.pub 中的内容全选复制到 key 输入框中，然后点击 Add key 完成添加公钥。)</p></li></ul><p>对于在用户设置中添加秘钥，具体操作如下：</p><ul><li>打开本地文件：id_rsa.pub（文件路径可以在上一步SSH生成成功后看到路径，比如我的是c/Users/John/.ssh/id_rsa.pub），可以将这个文件在编辑器中打开，然后全选复制。</li><li>登陆github，点击头像位置处 Settings ——&gt; SSH and GPG keys ——&gt; New SSH key，点击新建SSH key。</li><li>将之前复制的内容粘贴在key文本框里，title可以不用填（或者自己起一个名字也可以）。</li></ul><p>4.测试设置是否成功<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;设置-SSH-使用-Hexo-deploy-时免输用户名密码&quot;&gt;&lt;a href=&quot;#设置-SSH-使用-Hexo-deploy-时免输用户名密码&quot; class=&quot;headerlink&quot; title=&quot;设置 SSH 使用 Hexo deploy 时免输用户名密码&quot;&gt;&lt;/a&gt;设置 SSH 使用 Hexo deploy 时免输用户名密码&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;SSH 验证就是我们键入命令 &lt;code&gt;hexo deploy&lt;/code&gt; 以后，当那些需要提交的内容显示完成过后会弹出的一个小窗口提示我们输入用户名、密码。&lt;/p&gt;
+&lt;p&gt;当然，我们可以在电脑中设置SSH Key实现免密码输入。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo换电脑重新部署</title>
