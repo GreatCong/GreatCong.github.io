@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo-tale</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-09-22T13:37:51.739Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Cong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo插入图片</title>
+    <link href="http://yoursite.com/2018/09/22/Hexo/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
+    <id>http://yoursite.com/2018/09/22/Hexo/Hexo插入图片/</id>
+    <published>2018-09-22T13:28:07.636Z</published>
+    <updated>2018-09-22T13:37:51.739Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="如何在hexo文章中插入图片"><a href="#如何在hexo文章中插入图片" class="headerlink" title="如何在hexo文章中插入图片"></a>如何在hexo文章中插入图片</h1><hr><a id="more"></a><p>对于hexo，有两种方式： </p><ol><li>使用本地路径：在hexo/source目录下新建一个img文件夹，将图片放入该文件夹下，插入图片时链接即为/img/图片名称。 </li><li>使用微博图床，<a href="http://weibotuchuang.sinaapp.com/" target="_blank" rel="noopener">链接地址</a> 将图片拖入区域中，会生成图片的URL。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;如何在hexo文章中插入图片&quot;&gt;&lt;a href=&quot;#如何在hexo文章中插入图片&quot; class=&quot;headerlink&quot; title=&quot;如何在hexo文章中插入图片&quot;&gt;&lt;/a&gt;如何在hexo文章中插入图片&lt;/h1&gt;&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Marlin study</title>
+    <link href="http://yoursite.com/2018/09/22/Marlin/Marlin%20study/"/>
+    <id>http://yoursite.com/2018/09/22/Marlin/Marlin study/</id>
+    <published>2018-09-22T13:04:04.303Z</published>
+    <updated>2018-09-22T13:25:49.622Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Marlin-源码学习"><a href="#Marlin-源码学习" class="headerlink" title="Marlin 源码学习"></a>Marlin 源码学习</h1><h3 id="从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下"><a href="#从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下" class="headerlink" title="从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下"></a>从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下</h3><p><img src="/img/Marlin1.jpg" alt="Marlin1"><br><a id="more"></a></p><p><img src="/img/Marlin2.jpg" alt="Marlin2"></p><p><img src="/img/Marlin3.jpg" alt="Marlin3"></p><p><img src="/img/Marlin4.jpg" alt="Marlin4"></p><p><img src="/img/Marlin5.jpg" alt="Marlin5"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Marlin-源码学习&quot;&gt;&lt;a href=&quot;#Marlin-源码学习&quot; class=&quot;headerlink&quot; title=&quot;Marlin 源码学习&quot;&gt;&lt;/a&gt;Marlin 源码学习&lt;/h1&gt;&lt;h3 id=&quot;从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下&quot;&gt;&lt;a href=&quot;#从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下&quot; class=&quot;headerlink&quot; title=&quot;从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下&quot;&gt;&lt;/a&gt;从网上看到的Marlin固件的源码解析，其以裁剪移植的STM32的程序进行分析如下&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/img/Marlin1.jpg&quot; alt=&quot;Marlin1&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Marlin" scheme="http://yoursite.com/tags/Marlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub for windows无法启动</title>
+    <link href="http://yoursite.com/2018/04/29/github/problem%20for%20github%20install/"/>
+    <id>http://yoursite.com/2018/04/29/github/problem for github install/</id>
+    <published>2018-04-29T14:30:16.664Z</published>
+    <updated>2018-04-29T15:47:29.061Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经不知是第几次遇到这个GitHub for windows 客户端没法启动的问题了，每次都是要Google,在这里标记一下</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><a id="more"></a><h3 id="系统为Windows-XP"><a href="#系统为Windows-XP" class="headerlink" title="系统为Windows XP"></a>系统为Windows XP</h3><p>当你的系统是Windows XP时，进入用户目录下的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%userprofile%\Local Settings\Apps (例如：C:\Documents &amp; Settings\Username\Local Settings\Apps)</span><br></pre></td></tr></table></figure><h3 id="系统为Windows-7以上"><a href="#系统为Windows-7以上" class="headerlink" title="系统为Windows 7以上"></a>系统为Windows 7以上</h3><p>当你的系统是 Windows 7时，进入用户目录下的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%userprofile%\AppData\Local\Apps (例如：C:\users\Username\AppData\Local\Apps)</span><br></pre></td></tr></table></figure><p>进入以上目录后，删除 2.0 这个文件夹,然后就OK了！</p><p>解决方法参考地址：<a href="http://superuser.com/questions/483515/github-for-windows-install-error" target="_blank" rel="noopener">http://superuser.com/questions/483515/github-for-windows-install-error</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;已经不知是第几次遇到这个GitHub for windows 客户端没法启动的问题了，每次都是要Google,在这里标记一下&lt;/p&gt;
+&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-test</title>
+    <link href="http://yoursite.com/2018/04/25/Hexo/hello-world/"/>
+    <id>http://yoursite.com/2018/04/25/Hexo/hello-world/</id>
+    <published>2018-04-25T13:49:24.106Z</published>
+    <updated>2018-04-29T15:25:15.676Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
