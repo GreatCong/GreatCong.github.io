@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-13T14:19:25.039Z</updated>
+  <updated>2019-03-06T11:45:10.880Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis Study</title>
+    <link href="http://yoursite.com/2019/03/06/Redis/Redis%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/06/Redis/Redis学习（二）/</id>
+    <published>2019-03-06T11:32:25.957Z</published>
+    <updated>2019-03-06T11:45:10.880Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis学习（二）"><a href="#Redis学习（二）" class="headerlink" title="Redis学习（二）"></a>Redis学习（二）</h1><h3 id="C-使用-redis-作为缓存服务器"><a href="#C-使用-redis-作为缓存服务器" class="headerlink" title="C# 使用 redis 作为缓存服务器"></a>C# 使用 redis 作为缓存服务器</h3><p>​        利用C#自带的类库可以实现缓存。我们只要继承自 cachebase,并重写相关方法，就可以实现使用redis作为缓存服务器，在实现之前，我们先约定key值为 “n:name,c:key”来作为redis的key值，启用name为自定义的，因为可能不同的分层会使用不同的name名称，key就是需要保存的缓存项的key，代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">protected virtual string GetLocalizedKey(string key)</span><br><span class="line">&#123;</span><br><span class="line">    return &quot;n:&quot; + &quot;RandomRedis&quot; + &quot;,c:&quot; + key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​       基于上述的思想，r我们可以知道缓存其实就是一系列的 key-value，而 redis 是典型的key-value数据库之一，那么，我们是不是可以借助 redis来实现缓存呢?答案是肯定的!</p><p>​     代码参考：<a href="https://www.jianshu.com/p/f5f2a5e7ec1c" target="_blank" rel="noopener">https://www.jianshu.com/p/f5f2a5e7ec1c</a></p><a id="more"></a><h3 id="补充概念"><a href="#补充概念" class="headerlink" title="补充概念"></a>补充概念</h3><p>分布式与集群的区别（<a href="http://www.cnblogs.com/aspirant/p/5697807.html）" target="_blank" rel="noopener">http://www.cnblogs.com/aspirant/p/5697807.html）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Redis学习（二）&quot;&gt;&lt;a href=&quot;#Redis学习（二）&quot; class=&quot;headerlink&quot; title=&quot;Redis学习（二）&quot;&gt;&lt;/a&gt;Redis学习（二）&lt;/h1&gt;&lt;h3 id=&quot;C-使用-redis-作为缓存服务器&quot;&gt;&lt;a href=&quot;#C-使用-redis-作为缓存服务器&quot; class=&quot;headerlink&quot; title=&quot;C# 使用 redis 作为缓存服务器&quot;&gt;&lt;/a&gt;C# 使用 redis 作为缓存服务器&lt;/h3&gt;&lt;p&gt;​        利用C#自带的类库可以实现缓存。我们只要继承自 cachebase,并重写相关方法，就可以实现使用redis作为缓存服务器，在实现之前，我们先约定key值为 “n:name,c:key”来作为redis的key值，启用name为自定义的，因为可能不同的分层会使用不同的name名称，key就是需要保存的缓存项的key，代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;protected virtual string GetLocalizedKey(string key)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return &amp;quot;n:&amp;quot; + &amp;quot;RandomRedis&amp;quot; + &amp;quot;,c:&amp;quot; + key;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;​       基于上述的思想，r我们可以知道缓存其实就是一系列的 key-value，而 redis 是典型的key-value数据库之一，那么，我们是不是可以借助 redis来实现缓存呢?答案是肯定的!&lt;/p&gt;
+&lt;p&gt;​     代码参考：&lt;a href=&quot;https://www.jianshu.com/p/f5f2a5e7ec1c&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/f5f2a5e7ec1c&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Redis学习" scheme="http://yoursite.com/tags/Redis%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis Study</title>
+    <link href="http://yoursite.com/2019/03/06/Redis/Redis%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/06/Redis/Redis学习（一）/</id>
+    <published>2019-03-06T10:54:50.992Z</published>
+    <updated>2019-03-06T11:44:57.437Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis学习（一）"><a href="#Redis学习（一）" class="headerlink" title="Redis学习（一）"></a>Redis学习（一）</h1><h3 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h3><p>Redis的官网为: <a href="http://redis.io/" target="_blank" rel="noopener">http://redis.io/</a>，下载测试即可（在开启Redis服务后，注意测试数据库的时候可能需要管理员权限）。</p><p>参考博客：<a href="http://www.cnblogs.com/zhangweizhong/p/4969240.html" target="_blank" rel="noopener">http://www.cnblogs.com/zhangweizhong/p/4969240.html</a></p><h3 id="C-调用Redis"><a href="#C-调用Redis" class="headerlink" title="C#调用Redis"></a>C#调用Redis</h3><p>​          Redis官网提供了很多开源的C#客户端。例如，Nhiredis ，ServiceStack.Redis ，StackExchange.Redis等。其中ServiceStack.Redis应该算是比较流行的。它提供了一整套从Redis数据结构都强类型对象转换的机制并将对象json序列化。所以这里只介绍ServiceStack.Redis，它也是目前我们产品中所使用的客户端。 </p><p>参考博客：<a href="https://www.cnblogs.com/zhangweizhong/p/4972348.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangweizhong/p/4972348.html</a></p><a id="more"></a><h3 id="C-与Redis的消息队列通信"><a href="#C-与Redis的消息队列通信" class="headerlink" title="C#与Redis的消息队列通信"></a>C#与Redis的消息队列通信</h3><p>​       运行 redis 服务，如果已经运行，则无需重复运行，在用管理员模式分别打开两个命令窗口，并切换到 redis工作目录，执行客户端模式命令 subscribe和publish，分别表示消费者和生产者。</p><p>​      其中，SUBSCRIBE 命令是建立监听，参数是通道名称 PUBLISH 命令是给指定通道发送消息 </p><p>​      在vs创建命令行程序，并引入nuget包: StackExchange.Redis，代码测试如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class Program</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        static ConnectionMultiplexer redisClient = ConnectionMultiplexer.Connect(&quot;localhost&quot;);</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            IDatabase db = redisClient.GetDatabase();</span><br><span class="line">            // 测试 key value</span><br><span class="line">            string value = &quot;abcdefg&quot;;</span><br><span class="line">            db.StringSet(&quot;mykey&quot;, value);</span><br><span class="line">             value = db.StringGet(&quot;mykey&quot;);</span><br><span class="line">            Console.WriteLine(value);</span><br><span class="line">            // 测试消息队列</span><br><span class="line">            ISubscriber sub = redisClient.GetSubscriber();</span><br><span class="line">            sub.Subscribe(&quot;messages&quot;, (channel, message) =&gt; &#123;</span><br><span class="line">                Console.WriteLine((string)message);</span><br><span class="line">            &#125;);</span><br><span class="line">            Thread.Sleep(1000);</span><br><span class="line">            sub.Publish(&quot;messages&quot;, &quot;hello&quot;);</span><br><span class="line"></span><br><span class="line">            Thread.Sleep(1000);</span><br><span class="line">            sub.Publish(&quot;redisMessages&quot;, &quot;This message from C# program&quot;);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Redis学习（一）&quot;&gt;&lt;a href=&quot;#Redis学习（一）&quot; class=&quot;headerlink&quot; title=&quot;Redis学习（一）&quot;&gt;&lt;/a&gt;Redis学习（一）&lt;/h1&gt;&lt;h3 id=&quot;Redis安装&quot;&gt;&lt;a href=&quot;#Redis安装&quot; class=&quot;headerlink&quot; title=&quot;Redis安装&quot;&gt;&lt;/a&gt;Redis安装&lt;/h3&gt;&lt;p&gt;Redis的官网为: &lt;a href=&quot;http://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://redis.io/&lt;/a&gt;，下载测试即可（在开启Redis服务后，注意测试数据库的时候可能需要管理员权限）。&lt;/p&gt;
+&lt;p&gt;参考博客：&lt;a href=&quot;http://www.cnblogs.com/zhangweizhong/p/4969240.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.cnblogs.com/zhangweizhong/p/4969240.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;C-调用Redis&quot;&gt;&lt;a href=&quot;#C-调用Redis&quot; class=&quot;headerlink&quot; title=&quot;C#调用Redis&quot;&gt;&lt;/a&gt;C#调用Redis&lt;/h3&gt;&lt;p&gt;​          Redis官网提供了很多开源的C#客户端。例如，Nhiredis ，ServiceStack.Redis ，StackExchange.Redis等。其中ServiceStack.Redis应该算是比较流行的。它提供了一整套从Redis数据结构都强类型对象转换的机制并将对象json序列化。所以这里只介绍ServiceStack.Redis，它也是目前我们产品中所使用的客户端。 &lt;/p&gt;
+&lt;p&gt;参考博客：&lt;a href=&quot;https://www.cnblogs.com/zhangweizhong/p/4972348.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/zhangweizhong/p/4972348.html&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Redis学习" scheme="http://yoursite.com/tags/Redis%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo输入SSH Key</title>

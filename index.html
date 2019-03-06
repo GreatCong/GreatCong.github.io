@@ -75,7 +75,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/GreatCong" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -116,7 +116,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/GreatCong" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -149,6 +149,172 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Redis/Redis学习（二）" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/06/Redis/Redis学习（二）/">Redis Study</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/06/Redis/Redis学习（二）/" class="archive-article-date">
+  	<time datetime="2019-03-06T11:32:25.957Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis学习（二）"><a href="#Redis学习（二）" class="headerlink" title="Redis学习（二）"></a>Redis学习（二）</h1><h3 id="C-使用-redis-作为缓存服务器"><a href="#C-使用-redis-作为缓存服务器" class="headerlink" title="C# 使用 redis 作为缓存服务器"></a>C# 使用 redis 作为缓存服务器</h3><p>​        利用C#自带的类库可以实现缓存。我们只要继承自 cachebase,并重写相关方法，就可以实现使用redis作为缓存服务器，在实现之前，我们先约定key值为 “n:name,c:key”来作为redis的key值，启用name为自定义的，因为可能不同的分层会使用不同的name名称，key就是需要保存的缓存项的key，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">protected virtual string GetLocalizedKey(string key)</span><br><span class="line">&#123;</span><br><span class="line">    return &quot;n:&quot; + &quot;RandomRedis&quot; + &quot;,c:&quot; + key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​       基于上述的思想，r我们可以知道缓存其实就是一系列的 key-value，而 redis 是典型的key-value数据库之一，那么，我们是不是可以借助 redis来实现缓存呢?答案是肯定的!</p>
+<p>​     代码参考：<a href="https://www.jianshu.com/p/f5f2a5e7ec1c" target="_blank" rel="noopener">https://www.jianshu.com/p/f5f2a5e7ec1c</a></p>
+        
+          <a class="article-more-a" href="/2019/03/06/Redis/Redis学习（二）/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/06/Redis/Redis学习（二）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Redis/Redis学习（一）" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/06/Redis/Redis学习（一）/">Redis Study</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/06/Redis/Redis学习（一）/" class="archive-article-date">
+  	<time datetime="2019-03-06T10:54:50.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis学习（一）"><a href="#Redis学习（一）" class="headerlink" title="Redis学习（一）"></a>Redis学习（一）</h1><h3 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h3><p>Redis的官网为: <a href="http://redis.io/" target="_blank" rel="noopener">http://redis.io/</a>，下载测试即可（在开启Redis服务后，注意测试数据库的时候可能需要管理员权限）。</p>
+<p>参考博客：<a href="http://www.cnblogs.com/zhangweizhong/p/4969240.html" target="_blank" rel="noopener">http://www.cnblogs.com/zhangweizhong/p/4969240.html</a></p>
+<h3 id="C-调用Redis"><a href="#C-调用Redis" class="headerlink" title="C#调用Redis"></a>C#调用Redis</h3><p>​          Redis官网提供了很多开源的C#客户端。例如，Nhiredis ，ServiceStack.Redis ，StackExchange.Redis等。其中ServiceStack.Redis应该算是比较流行的。它提供了一整套从Redis数据结构都强类型对象转换的机制并将对象json序列化。所以这里只介绍ServiceStack.Redis，它也是目前我们产品中所使用的客户端。 </p>
+<p>参考博客：<a href="https://www.cnblogs.com/zhangweizhong/p/4972348.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangweizhong/p/4972348.html</a></p>
+        
+          <a class="article-more-a" href="/2019/03/06/Redis/Redis学习（一）/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/06/Redis/Redis学习（一）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Hexo/Hexo-SSH秘钥" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
@@ -721,11 +887,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Marlin</a>
+                <a href="javascript:void(0)" class="js-tag color3">Redis学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Marlin</a>
               </li>
             
             <div class="clearfix"></div>
