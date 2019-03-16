@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-06T11:45:10.880Z</updated>
+  <updated>2019-03-07T14:46:11.131Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis Study</title>
+    <link href="http://yoursite.com/2019/03/07/Redis/Redis%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/07/Redis/Redis学习（三）/</id>
+    <published>2019-03-07T13:05:16.084Z</published>
+    <updated>2019-03-07T14:46:11.131Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis学习（三）"><a href="#Redis学习（三）" class="headerlink" title="Redis学习（三）"></a>Redis学习（三）</h1><p>​        Redis与Memcached一样，为了保证效率，数据都是缓存在内存中，区别是redis会周期性地把更新的数据写入磁盘或者把修改操作写入追加的记录，并且在此基础上实现master-slave（主从）同步。</p><p>​       Redis支持主从同步，数据可以从主服务器向任意数量的从服务器同步，从服务器可以是关联其他从服务器的主服务器。这使得Redis可以单层树复制。存盘可以有意无意的对数据进行写操作。</p><h3 id="Redis与Memcached区别"><a href="#Redis与Memcached区别" class="headerlink" title="Redis与Memcached区别"></a>Redis与Memcached区别</h3><p>​        在分布式存储中，如果服务器挂掉，内存中的数据会丢失，缓存中的数据也会没有。如果考虑到服务器挂掉数据能够恢复，可以选择使用Redis，其余Memcached的优点在于服务器挂掉后重启从硬盘中恢复，因为Redis会每隔一段时间把数据同步到硬盘上。</p><ul><li>Memcached是多线程，而Redis使用单线程。</li><li>Memchached使用预分配的内存池的方式，Redis使用现场申请内存的方式来存储数据，并且可以配置虚拟内存。</li><li>Redis可以实现持久化，主从复制，实现故障恢复。</li><li>Memechached只是简单的key-value，但是Redis支持数据类型较多，包括string(字符串)、list（链表）、set（集合）、zset(sorted set – 有序集合)和hash（哈希类型，即字符串字段和字符串值之间的映射）。</li></ul><h3 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h3><p>redis支持两种持久化方式：</p><ul><li>snapshotting（快照）也是默认方式(把数据做一个备份，将数据存储到文件)</li><li>Append-only-file（aof）方式，redis重启的时候会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Redis学习（三）&quot;&gt;&lt;a href=&quot;#Redis学习（三）&quot; class=&quot;headerlink&quot; title=&quot;Redis学习（三）&quot;&gt;&lt;/a&gt;Redis学习（三）&lt;/h1&gt;&lt;p&gt;​        Redis与Memcached一样，为了保证效率，数据都是
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Redis学习" scheme="http://yoursite.com/tags/Redis%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis Study</title>

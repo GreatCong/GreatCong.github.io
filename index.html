@@ -150,6 +150,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Redis/Redis学习（三）" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/07/Redis/Redis学习（三）/">Redis Study</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/07/Redis/Redis学习（三）/" class="archive-article-date">
+  	<time datetime="2019-03-07T13:05:16.084Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis学习（三）"><a href="#Redis学习（三）" class="headerlink" title="Redis学习（三）"></a>Redis学习（三）</h1><p>​        Redis与Memcached一样，为了保证效率，数据都是缓存在内存中，区别是redis会周期性地把更新的数据写入磁盘或者把修改操作写入追加的记录，并且在此基础上实现master-slave（主从）同步。</p>
+<p>​       Redis支持主从同步，数据可以从主服务器向任意数量的从服务器同步，从服务器可以是关联其他从服务器的主服务器。这使得Redis可以单层树复制。存盘可以有意无意的对数据进行写操作。</p>
+<h3 id="Redis与Memcached区别"><a href="#Redis与Memcached区别" class="headerlink" title="Redis与Memcached区别"></a>Redis与Memcached区别</h3><p>​        在分布式存储中，如果服务器挂掉，内存中的数据会丢失，缓存中的数据也会没有。如果考虑到服务器挂掉数据能够恢复，可以选择使用Redis，其余Memcached的优点在于服务器挂掉后重启从硬盘中恢复，因为Redis会每隔一段时间把数据同步到硬盘上。</p>
+<ul>
+<li>Memcached是多线程，而Redis使用单线程。</li>
+<li>Memchached使用预分配的内存池的方式，Redis使用现场申请内存的方式来存储数据，并且可以配置虚拟内存。</li>
+<li>Redis可以实现持久化，主从复制，实现故障恢复。</li>
+<li>Memechached只是简单的key-value，但是Redis支持数据类型较多，包括string(字符串)、list（链表）、set（集合）、zset(sorted set – 有序集合)和hash（哈希类型，即字符串字段和字符串值之间的映射）。</li>
+</ul>
+<h3 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h3><p>redis支持两种持久化方式：</p>
+<ul>
+<li>snapshotting（快照）也是默认方式(把数据做一个备份，将数据存储到文件)</li>
+<li>Append-only-file（aof）方式，redis重启的时候会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/07/Redis/Redis学习（三）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Redis/Redis学习（二）" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -887,7 +978,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Redis学习</a>
+                <a href="javascript:void(0)" class="js-tag color2">Marlin</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -895,7 +986,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Marlin</a>
+                <a href="javascript:void(0)" class="js-tag color3">Redis学习</a>
               </li>
             
             <div class="clearfix"></div>
