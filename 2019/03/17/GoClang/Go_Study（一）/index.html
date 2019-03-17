@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 随笔 | Hexo-tale</title>
+  <title>Goclang Study（一） | Hexo-tale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-tale">
-<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
+  <meta name="description" content="Go标准库说明【unsafe】包含了一些打破Go语言“类型安全”的命令，一般的程序中不会被使用，可用在C/C++程序的调用中 【syscall】底层的外部包，提供了操作系统底层调用的基本接口 【os/exec】提供我们运行外部操作系统命令和程序的方式 【os】提供给我们一个平台无关性的操作系统功能接口，采用Unix设计，隐藏了不同操作系统间差异，让不同 的文件系统和操作系统对象表现一致 【arch">
+<meta name="keywords" content="随笔,GoClang学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Goclang Study（一）">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/GoClang/Go_Study（一）/index.html">
 <meta property="og:site_name" content="Hexo-tale">
+<meta property="og:description" content="Go标准库说明【unsafe】包含了一些打破Go语言“类型安全”的命令，一般的程序中不会被使用，可用在C/C++程序的调用中 【syscall】底层的外部包，提供了操作系统底层调用的基本接口 【os/exec】提供我们运行外部操作系统命令和程序的方式 【os】提供给我们一个平台无关性的操作系统功能接口，采用Unix设计，隐藏了不同操作系统间差异，让不同 的文件系统和操作系统对象表现一致 【arch">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-17T05:23:38.746Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-tale">
+<meta name="twitter:title" content="Goclang Study（一）">
+<meta name="twitter:description" content="Go标准库说明【unsafe】包含了一些打破Go语言“类型安全”的命令，一般的程序中不会被使用，可用在C/C++程序的调用中 【syscall】底层的外部包，提供了操作系统底层调用的基本接口 【os/exec】提供我们运行外部操作系统命令和程序的方式 【os】提供给我们一个平台无关性的操作系统功能接口，采用Unix设计，隐藏了不同操作系统间差异，让不同 的文件系统和操作系统对象表现一致 【arch">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-tale" type="application/atom+xml">
   
@@ -148,36 +153,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-GoClang/Go_Study（一）" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/GoClang/Go_Study（一）/" class="archive-article-date">
-  	<time datetime="2019-03-17T05:16:17.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/GoClang/Go_Study（一）/">Goclang Study（一）</a>
+    <h1 class="article-title" itemprop="name">
+      Goclang Study（一）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/17/GoClang/Go_Study（一）/" class="archive-article-date">
+  	<time datetime="2019-03-17T05:16:17.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Go标准库说明"><a href="#Go标准库说明" class="headerlink" title="Go标准库说明"></a>Go标准库说明</h1><p>【unsafe】包含了一些打破Go语言“类型安全”的命令，一般的程序中不会被使用，可用在C/C++程序的调用中</p>
+<p>【syscall】底层的外部包，提供了操作系统底层调用的基本接口</p>
+<p>【os/exec】提供我们运行外部操作系统命令和程序的方式</p>
+<p>【os】提供给我们一个平台无关性的操作系统功能接口，采用Unix设计，隐藏了不同操作系统间差异，让不同 的文件系统和操作系统对象表现一致</p>
+<p>【archive/tar】【/zip-compress】压缩（解压缩文件功能）</p>
+<p>【fmt】提供了格式化输入输出功能</p>
+<p>【io】提供了基本输入输出功能，大多数是围绕系统功能的封装</p>
+<p>【bufio】缓冲输入输出的封装</p>
+<p>【path/filepath】用来操作再当前系统中的目标文件名路径</p>
+<p>【falg】对命令行参数的操作</p>
+<p>【strings】字符串的操作</p>
+<p>【strconv】提供将字符串转换为基础类型的功能</p>
+<a id="more"></a>
+<p>【unicode】为unicode类型的字符串提供特殊的功能</p>
+<p>【regexp】正则表达式功能</p>
+<p>【bytes】提供对字符型分片的操作</p>
+<p>【index/suffixarray】子字符串快速查询</p>
+<p>【math】基本的数据函数</p>
+<p>【math/cmath】对复数的操作</p>
+<p>【math/rand】伪随机数生成</p>
+<p>【sort】为数组排序和自定义集合</p>
+<p>【math/big】大数的实现和计算</p>
+<p>【list】双链表</p>
+<p>【ring】环形链表</p>
+<p>【time】日期和时间的基本操作</p>
+<p>【log】记录程序运行时产生的日志</p>
+<p>【encoding/json】json的相关操作</p>
+<p>【encoding/xml】xml相关操作</p>
+<p>【net】网络数据的基本操作</p>
+<p>【http】提供了一个可扩展的HTTP服务器和基础客户端，解析HTTP请求和回复</p>
+<p>【html】HTML5解析器</p>
+<p>【runtime】Go程序运行时的交互操作，例如垃圾回收和协程创建</p>
+<p>【reflect】实现通过程序运行时反射</p>
+<p>完整Golang 包请<a href="https://gowalker.org/search?q=gorepos" target="_blank" rel="noopener">点击</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,365 +230,119 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/Redis/Redis学习（三）/" class="archive-article-date">
-  	<time datetime="2019-03-07T13:05:16.084Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/Redis/Redis学习（三）/">Redis Study（三）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/Redis/Redis学习（二）/" class="archive-article-date">
-  	<time datetime="2019-03-06T11:32:25.957Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Redis/Redis学习（二）/">Redis Study（二）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/Redis/Redis学习（一）/" class="archive-article-date">
-  	<time datetime="2019-03-06T10:54:50.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Redis/Redis学习（一）/">Redis Study（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo-SSH秘钥/" class="archive-article-date">
-  	<time datetime="2019-01-13T14:03:32.794Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo-SSH秘钥/">Hexo输入SSH Key</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo换电脑重新部署/" class="archive-article-date">
-  	<time datetime="2019-01-13T12:50:21.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo换电脑重新部署/">Hexo换电脑重新部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Hexo/Hexo插入图片/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:28:07.636Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Hexo/Hexo插入图片/">Hexo插入图片</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/17/GoClang/Go_Study（一）/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Marlin/Marlin study/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:04:04.303Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/07/Redis/Redis学习（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Redis Study（三）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Marlin/Marlin study/">Marlin study</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Marlin</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Go标准库说明"><span class="toc-number">1.</span> <span class="toc-text">Go标准库说明</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/29/github/problem for github install/" class="archive-article-date">
-  	<time datetime="2018-04-29T14:30:16.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-29</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/29/github/problem for github install/">GitHub for windows无法启动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -574,9 +365,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
