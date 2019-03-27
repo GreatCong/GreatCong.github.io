@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo-tale</title>
+  <title>如何在Linux上自动设置JAVA_HOME环境变量 | Hexo-tale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-tale">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="如何在Linux上自动设置JAVA_HOME环境变量​        许多 Java 程序或基于 Java 的集成开发环境 (IDE)都需要设置好 JAVA_HOME 环境变量。该变量应指向 Java 开发工具包 (JDK)或Java 运行时环境 (JRE)的安装目录。JDK 不仅包含了 JRE 提供的一切，还带有用于编译 Java 程序的额外的二进制代码和库文件(例如编译器，调试器及 JavaD">
+<meta name="keywords" content="随笔,Linux学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在Linux上自动设置JAVA_HOME环境变量">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/Linux/Linux设置java环境变量/index.html">
 <meta property="og:site_name" content="Hexo-tale">
+<meta property="og:description" content="如何在Linux上自动设置JAVA_HOME环境变量​        许多 Java 程序或基于 Java 的集成开发环境 (IDE)都需要设置好 JAVA_HOME 环境变量。该变量应指向 Java 开发工具包 (JDK)或Java 运行时环境 (JRE)的安装目录。JDK 不仅包含了 JRE 提供的一切，还带有用于编译 Java 程序的额外的二进制代码和库文件(例如编译器，调试器及 JavaD">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-27T14:35:23.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-tale">
+<meta name="twitter:title" content="如何在Linux上自动设置JAVA_HOME环境变量">
+<meta name="twitter:description" content="如何在Linux上自动设置JAVA_HOME环境变量​        许多 Java 程序或基于 Java 的集成开发环境 (IDE)都需要设置好 JAVA_HOME 环境变量。该变量应指向 Java 开发工具包 (JDK)或Java 运行时环境 (JRE)的安装目录。JDK 不仅包含了 JRE 提供的一切，还带有用于编译 Java 程序的额外的二进制代码和库文件(例如编译器，调试器及 JavaD">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-tale" type="application/atom+xml">
   
@@ -148,36 +153,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Linux/Linux设置java环境变量" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/Linux/Linux设置java环境变量/" class="archive-article-date">
-  	<time datetime="2019-03-27T14:34:24.999Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/27/Linux/Linux设置java环境变量/">如何在Linux上自动设置JAVA_HOME环境变量</a>
+    <h1 class="article-title" itemprop="name">
+      如何在Linux上自动设置JAVA_HOME环境变量
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/27/Linux/Linux设置java环境变量/" class="archive-article-date">
+  	<time datetime="2019-03-27T14:34:24.999Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何在Linux上自动设置JAVA-HOME环境变量"><a href="#如何在Linux上自动设置JAVA-HOME环境变量" class="headerlink" title="如何在Linux上自动设置JAVA_HOME环境变量"></a>如何在Linux上自动设置JAVA_HOME环境变量</h1><p>​        许多 Java 程序或基于 Java 的集成开发环境 (IDE)都需要设置好 JAVA_HOME 环境变量。该变量应指向 Java 开发工具包 (JDK)或Java 运行时环境 (JRE)的安装目录。JDK 不仅包含了 JRE 提供的一切，还带有用于编译 Java 程序的额外的二进制代码和库文件(例如编译器，调试器及 JavaDoc 文档生成器)。JDK 是用来构建 Java 程序的，如果只是运行已经构建好的 Java 程序，单独一份 JRE 就足够了。</p>
+<p>​        当您正试图设置 JAVA_HOME 环境变量时，麻烦的事情在于 JAVA_HOME 变量需要根据以下几点而改变：</p>
+<ol>
+<li>您是否安装了 JDK 或 JRE;</li>
+<li>您安装了哪个版本;</li>
+<li>您安装的是 Oracle JDK 还是 Open JDK。</li>
+</ol>
+<p>因此每当您的开发环境或运行时环境发生改变(例如为 JDK 更新版本)时，您需要根据实际情况调整 JAVA_HOME 变量，而这种做法是繁重且缺乏效率的。</p>
+<p>​       以下 export 命令能为您自动设置 JAVA_HOME 环境变量，而无须顾及上述的因素。</p>
+<p>若您安装的是 JRE： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))</span><br></pre></td></tr></table></figure>
+<p>若您安装的是 JDK： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))</span><br></pre></td></tr></table></figure>
+<p>   根据您的情况，将上述命令中的一条写入 ~/.bashrc(或 /etc/profile)文件中，它就会永久地设置好 JAVA_HOME 变量。<br>   注意，由于 java 或 javac 可以建立起多个层次的符号链接，为此”readlink -f”命令是用来获取它们真正的执行路径的。<br>   举个例子，假如您安装的是 Oracle JRE 7，那么上述的第一条 export 命令将自动设JAVA_HOME 为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/jvm/java-7-oracle/jre</span><br></pre></td></tr></table></figure>
+<p>若您安装的是 Open JDK 第8版，那么第二条 export 命令将设置 JAVA_HOME 为： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/jvm/java-8-openjdk-amd64</span><br></pre></td></tr></table></figure>
+<p>用如下命令测试，会返回JAVA_HOME的环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,410 +214,118 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/23/其他/为什么要模1000000007/" class="archive-article-date">
-  	<time datetime="2019-03-23T10:48:27.502Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/23/其他/为什么要模1000000007/">为什么要模1000000007</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/GoClang/Go_Study（一）/" class="archive-article-date">
-  	<time datetime="2019-03-17T05:16:17.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/GoClang/Go_Study（一）/">Goclang Study（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GoClang学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/Redis/Redis学习（三）/" class="archive-article-date">
-  	<time datetime="2019-03-07T13:05:16.084Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/Redis/Redis学习（三）/">Redis Study（三）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/Redis/Redis学习（二）/" class="archive-article-date">
-  	<time datetime="2019-03-06T11:32:25.957Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Redis/Redis学习（二）/">Redis Study（二）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/Redis/Redis学习（一）/" class="archive-article-date">
-  	<time datetime="2019-03-06T10:54:50.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Redis/Redis学习（一）/">Redis Study（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Redis学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo-SSH秘钥/" class="archive-article-date">
-  	<time datetime="2019-01-13T14:03:32.794Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo-SSH秘钥/">Hexo输入SSH Key</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/13/Hexo/Hexo换电脑重新部署/" class="archive-article-date">
-  	<time datetime="2019-01-13T12:50:21.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/13/Hexo/Hexo换电脑重新部署/">Hexo换电脑重新部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Hexo/Hexo插入图片/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:28:07.636Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Hexo/Hexo插入图片/">Hexo插入图片</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/27/Linux/Linux设置java环境变量/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/22/Marlin/Marlin study/" class="archive-article-date">
-  	<time datetime="2018-09-22T13:04:04.303Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/23/其他/为什么要模1000000007/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">为什么要模1000000007</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/Marlin/Marlin study/">Marlin study</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Marlin</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在Linux上自动设置JAVA-HOME环境变量"><span class="toc-number">1.</span> <span class="toc-text">如何在Linux上自动设置JAVA_HOME环境变量</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -620,8 +349,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

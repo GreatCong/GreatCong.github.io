@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-17T05:23:38.746Z</updated>
+  <updated>2019-03-27T14:35:23.700Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在Linux上自动设置JAVA_HOME环境变量</title>
+    <link href="http://yoursite.com/2019/03/27/Linux/Linux%E8%AE%BE%E7%BD%AEjava%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>http://yoursite.com/2019/03/27/Linux/Linux设置java环境变量/</id>
+    <published>2019-03-27T14:34:24.999Z</published>
+    <updated>2019-03-27T14:35:23.700Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="如何在Linux上自动设置JAVA-HOME环境变量"><a href="#如何在Linux上自动设置JAVA-HOME环境变量" class="headerlink" title="如何在Linux上自动设置JAVA_HOME环境变量"></a>如何在Linux上自动设置JAVA_HOME环境变量</h1><p>​        许多 Java 程序或基于 Java 的集成开发环境 (IDE)都需要设置好 JAVA_HOME 环境变量。该变量应指向 Java 开发工具包 (JDK)或Java 运行时环境 (JRE)的安装目录。JDK 不仅包含了 JRE 提供的一切，还带有用于编译 Java 程序的额外的二进制代码和库文件(例如编译器，调试器及 JavaDoc 文档生成器)。JDK 是用来构建 Java 程序的，如果只是运行已经构建好的 Java 程序，单独一份 JRE 就足够了。</p><p>​        当您正试图设置 JAVA_HOME 环境变量时，麻烦的事情在于 JAVA_HOME 变量需要根据以下几点而改变：</p><ol><li>您是否安装了 JDK 或 JRE;</li><li>您安装了哪个版本;</li><li>您安装的是 Oracle JDK 还是 Open JDK。</li></ol><p>因此每当您的开发环境或运行时环境发生改变(例如为 JDK 更新版本)时，您需要根据实际情况调整 JAVA_HOME 变量，而这种做法是繁重且缺乏效率的。</p><p>​       以下 export 命令能为您自动设置 JAVA_HOME 环境变量，而无须顾及上述的因素。</p><p>若您安装的是 JRE： </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))</span><br></pre></td></tr></table></figure><p>若您安装的是 JDK： </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))</span><br></pre></td></tr></table></figure><p>   根据您的情况，将上述命令中的一条写入 ~/.bashrc(或 /etc/profile)文件中，它就会永久地设置好 JAVA_HOME 变量。<br>   注意，由于 java 或 javac 可以建立起多个层次的符号链接，为此”readlink -f”命令是用来获取它们真正的执行路径的。<br>   举个例子，假如您安装的是 Oracle JRE 7，那么上述的第一条 export 命令将自动设JAVA_HOME 为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/jvm/java-7-oracle/jre</span><br></pre></td></tr></table></figure><p>若您安装的是 Open JDK 第8版，那么第二条 export 命令将设置 JAVA_HOME 为： </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/jvm/java-8-openjdk-amd64</span><br></pre></td></tr></table></figure><p>用如下命令测试，会返回JAVA_HOME的环境变量</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;如何在Linux上自动设置JAVA-HOME环境变量&quot;&gt;&lt;a href=&quot;#如何在Linux上自动设置JAVA-HOME环境变量&quot; class=&quot;headerlink&quot; title=&quot;如何在Linux上自动设置JAVA_HOME环境变量&quot;&gt;&lt;/a&gt;如何在Linux
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Linux学习" scheme="http://yoursite.com/tags/Linux%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么要模1000000007</title>
+    <link href="http://yoursite.com/2019/03/23/%E5%85%B6%E4%BB%96/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%A8%A11000000007/"/>
+    <id>http://yoursite.com/2019/03/23/其他/为什么要模1000000007/</id>
+    <published>2019-03-23T10:48:27.502Z</published>
+    <updated>2019-03-23T10:50:06.520Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="为什么要模1000000007"><a href="#为什么要模1000000007" class="headerlink" title="为什么要模1000000007"></a>为什么要模1000000007</h1><ul><li>先看一下常用数据类型的数值范围（32位系统）</li></ul><table><thead><tr><th style="text-align:center">字节</th><th style="text-align:center">类型</th><th style="text-align:center">范围</th><th style="text-align:center">长度</th></tr></thead><tbody><tr><td style="text-align:center">一字节(2^8)</td><td style="text-align:center">char</td><td style="text-align:center">-128 ~ 127</td><td style="text-align:center">3</td></tr><tr><td style="text-align:center">一字节(2^8)</td><td style="text-align:center">unsigned char</td><td style="text-align:center">0 ~ 255</td><td style="text-align:center">3</td></tr><tr><td style="text-align:center">二字节(2^16)</td><td style="text-align:center">short</td><td style="text-align:center">-32768 ~ 32767</td><td style="text-align:center">5</td></tr><tr><td style="text-align:center">二字节(2^16)</td><td style="text-align:center">unsigned short</td><td style="text-align:center">0 ~ 65535</td><td style="text-align:center">5</td></tr><tr><td style="text-align:center">四字节(2^32)</td><td style="text-align:center">unsigned int</td><td style="text-align:center">0～4294967295</td><td style="text-align:center">10</td></tr><tr><td style="text-align:center">四字节(2^32)</td><td style="text-align:center">int</td><td style="text-align:center">-2147483648～2147483647</td><td style="text-align:center">10</td></tr><tr><td style="text-align:center">四字节(2^32)</td><td style="text-align:center">unsigned long</td><td style="text-align:center">0～4294967295</td><td style="text-align:center">10</td></tr><tr><td style="text-align:center">四字节(2^32)</td><td style="text-align:center">long</td><td style="text-align:center">-2147483648～2147483647</td><td style="text-align:center">10</td></tr><tr><td style="text-align:center">八字节(2^64)</td><td style="text-align:center">long long (g++)</td><td style="text-align:center">-9223372036854775808~9223372036854775807</td><td style="text-align:center">19</td></tr><tr><td style="text-align:center">八字节(2^64)</td><td style="text-align:center">unsigned long long (g++)</td><td style="text-align:center">0~18446744073709551615</td><td style="text-align:center">20</td></tr><tr><td style="text-align:center">八字节(2^64)</td><td style="text-align:center">__int64 (msvc)</td><td style="text-align:center">-9223372036854775808~9223372036854775807</td><td style="text-align:center">19</td></tr><tr><td style="text-align:center">八字节(2^64)</td><td style="text-align:center">unsigned __int64 (msvc)</td><td style="text-align:center">0~18446744073709551615</td><td style="text-align:center">20</td></tr></tbody></table><ul><li>1000000007 是最小的十位质数。模1000000007，可以保证值永远在int的范围内。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;为什么要模1000000007&quot;&gt;&lt;a href=&quot;#为什么要模1000000007&quot; class=&quot;headerlink&quot; title=&quot;为什么要模1000000007&quot;&gt;&lt;/a&gt;为什么要模1000000007&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;先看一下常用数据类型的数
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Goclang Study（一）</title>
