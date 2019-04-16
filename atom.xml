@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-27T14:35:23.700Z</updated>
+  <updated>2019-04-16T14:57:50.806Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang Study（二）</title>
+    <link href="http://yoursite.com/2019/04/16/GoClang/Go_Study%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/16/GoClang/Go_Study（二）/</id>
+    <published>2019-04-16T14:39:06.659Z</published>
+    <updated>2019-04-16T14:57:50.806Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Go语言的开发环境搭建"><a href="#Go语言的开发环境搭建" class="headerlink" title="Go语言的开发环境搭建"></a>Go语言的开发环境搭建</h1><h3 id="安装Go-SDK"><a href="#安装Go-SDK" class="headerlink" title="安装Go SDK"></a>安装Go SDK</h3><p>   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址<a href="https://www.golangtc.com/download" target="_blank" rel="noopener">https://www.golangtc.com/download</a><br>   设置完后在命令行中用如下指令验证：</p><ul><li>运行go version来检查是否安装成功</li><li>运行go env可以查看go相关的环境变量</li></ul><h3 id="安装Eclipse"><a href="#安装Eclipse" class="headerlink" title="安装Eclipse"></a>安装Eclipse</h3><ul><li>需要先安装JDK8或更高版本。</li><li>安装Eclipse 4.6 （Neon）或更高版本。</li></ul><a id="more"></a><h3 id="安装GoClipse"><a href="#安装GoClipse" class="headerlink" title="安装GoClipse"></a>安装GoClipse</h3><ul><li><p>在Eclipse中，打开Windows -&gt; Preferences，找到Go，在Go installation中输入Go SDK的%GOROOT%目录；</p></li><li><p>打开Go -&gt; Tools。  对gocode和godef可以点击Download按钮来从GitHub直接下载。</p><p>注意：对guru，直接Download会失败，因为Download时试图去从Golang官网下载，而Golang官网已经被拉黑了。</p><p>不过因为Golang的代码都是托管在GitHub上的，所以我们可以通过下面的地址来下载Go tools的源代码。 <a href="https://github.com/golang/tools下载后，在%GOROOT%/work/src目录下创建golang.org/x的目录结构，并将上一步git" target="_blank" rel="noopener">https://github.com/golang/tools下载后，在%GOROOT%/work/src目录下创建golang.org/x的目录结构，并将上一步git</a> clone的Go tools的tools目录复制到golang.org/x目录下。然后执行如下指令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export GOPATH="&lt;Your GOROOT&gt;/work"</span><br><span class="line">go build golang.org/x/tools/cmd/guru</span><br></pre></td></tr></table></figure><p>执行命令成功后guru.exe就会生成在%GOROOT%/work/bin目录下,最后在Eclipse中设置好guru即可。 </p></li></ul><h3 id="使用出现的问题"><a href="#使用出现的问题" class="headerlink" title="使用出现的问题"></a>使用出现的问题</h3><ul><li><p>如果在go开发中遇到这种报错。 resource does not have a corresponding go package ，其原因有二</p><p>(1). go文件不能直接放在src目录下面。可在src目录下面再建立一个文件夹 ;</p><p>(2). GOPATH是你运行自己项目时，需要调用的环境。与工作空间不能放在同一个目录下。 </p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Go语言的开发环境搭建&quot;&gt;&lt;a href=&quot;#Go语言的开发环境搭建&quot; class=&quot;headerlink&quot; title=&quot;Go语言的开发环境搭建&quot;&gt;&lt;/a&gt;Go语言的开发环境搭建&lt;/h1&gt;&lt;h3 id=&quot;安装Go-SDK&quot;&gt;&lt;a href=&quot;#安装Go-SDK&quot; class=&quot;headerlink&quot; title=&quot;安装Go SDK&quot;&gt;&lt;/a&gt;安装Go SDK&lt;/h3&gt;&lt;p&gt;   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址&lt;a href=&quot;https://www.golangtc.com/download&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.golangtc.com/download&lt;/a&gt;&lt;br&gt;   设置完后在命令行中用如下指令验证：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行go version来检查是否安装成功&lt;/li&gt;
+&lt;li&gt;运行go env可以查看go相关的环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安装Eclipse&quot;&gt;&lt;a href=&quot;#安装Eclipse&quot; class=&quot;headerlink&quot; title=&quot;安装Eclipse&quot;&gt;&lt;/a&gt;安装Eclipse&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;需要先安装JDK8或更高版本。&lt;/li&gt;
+&lt;li&gt;安装Eclipse 4.6 （Neon）或更高版本。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Golang学习" scheme="http://yoursite.com/tags/Golang%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在Linux上自动设置JAVA_HOME环境变量</title>
@@ -68,11 +98,11 @@
   </entry>
   
   <entry>
-    <title>Goclang Study（一）</title>
+    <title>Golang Study（一）</title>
     <link href="http://yoursite.com/2019/03/17/GoClang/Go_Study%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2019/03/17/GoClang/Go_Study（一）/</id>
     <published>2019-03-17T05:16:17.986Z</published>
-    <updated>2019-03-17T05:23:38.746Z</updated>
+    <updated>2019-04-16T14:39:38.566Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Go标准库说明"><a href="#Go标准库说明" class="headerlink" title="Go标准库说明"></a>Go标准库说明</h1><p>【unsafe】包含了一些打破Go语言“类型安全”的命令，一般的程序中不会被使用，可用在C/C++程序的调用中</p><p>【syscall】底层的外部包，提供了操作系统底层调用的基本接口</p><p>【os/exec】提供我们运行外部操作系统命令和程序的方式</p><p>【os】提供给我们一个平台无关性的操作系统功能接口，采用Unix设计，隐藏了不同操作系统间差异，让不同 的文件系统和操作系统对象表现一致</p><p>【archive/tar】【/zip-compress】压缩（解压缩文件功能）</p><p>【fmt】提供了格式化输入输出功能</p><p>【io】提供了基本输入输出功能，大多数是围绕系统功能的封装</p><p>【bufio】缓冲输入输出的封装</p><p>【path/filepath】用来操作再当前系统中的目标文件名路径</p><p>【falg】对命令行参数的操作</p><p>【strings】字符串的操作</p><p>【strconv】提供将字符串转换为基础类型的功能</p><a id="more"></a><p>【unicode】为unicode类型的字符串提供特殊的功能</p><p>【regexp】正则表达式功能</p><p>【bytes】提供对字符型分片的操作</p><p>【index/suffixarray】子字符串快速查询</p><p>【math】基本的数据函数</p><p>【math/cmath】对复数的操作</p><p>【math/rand】伪随机数生成</p><p>【sort】为数组排序和自定义集合</p><p>【math/big】大数的实现和计算</p><p>【list】双链表</p><p>【ring】环形链表</p><p>【time】日期和时间的基本操作</p><p>【log】记录程序运行时产生的日志</p><p>【encoding/json】json的相关操作</p><p>【encoding/xml】xml相关操作</p><p>【net】网络数据的基本操作</p><p>【http】提供了一个可扩展的HTTP服务器和基础客户端，解析HTTP请求和回复</p><p>【html】HTML5解析器</p><p>【runtime】Go程序运行时的交互操作，例如垃圾回收和协程创建</p><p>【reflect】实现通过程序运行时反射</p><p>完整Golang 包请<a href="https://gowalker.org/search?q=gorepos" target="_blank" rel="noopener">点击</a></p>]]></content>
     
@@ -96,7 +126,7 @@
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="GoClang学习" scheme="http://yoursite.com/tags/GoClang%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Golang学习" scheme="http://yoursite.com/tags/Golang%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

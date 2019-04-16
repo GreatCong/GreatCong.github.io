@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/4 | Hexo-tale</title>
+  <title>Golang Study（二） | Hexo-tale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-tale">
-<meta property="og:url" content="http://yoursite.com/archives/2018/04/index.html">
+  <meta name="description" content="Go语言的开发环境搭建安装Go SDK   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址https://www.golangtc.com/download   设置完后在命令行中用如下指令验证：  运行go version来检查是否安装成功 运行go env可以查看go相关的环境变量  安装Eclipse 需要先安装JDK8或更高版">
+<meta name="keywords" content="随笔,Golang学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang Study（二）">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/GoClang/Go_Study（二）/index.html">
 <meta property="og:site_name" content="Hexo-tale">
+<meta property="og:description" content="Go语言的开发环境搭建安装Go SDK   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址https://www.golangtc.com/download   设置完后在命令行中用如下指令验证：  运行go version来检查是否安装成功 运行go env可以查看go相关的环境变量  安装Eclipse 需要先安装JDK8或更高版">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-16T14:57:50.806Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-tale">
+<meta name="twitter:title" content="Golang Study（二）">
+<meta name="twitter:description" content="Go语言的开发环境搭建安装Go SDK   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址https://www.golangtc.com/download   设置完后在命令行中用如下指令验证：  运行go version来检查是否安装成功 运行go env可以查看go相关的环境变量  安装Eclipse 需要先安装JDK8或更高版">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-tale" type="application/atom+xml">
   
@@ -148,36 +153,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-GoClang/Go_Study（二）" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/29/github/problem for github install/" class="archive-article-date">
-  	<time datetime="2018-04-29T14:30:16.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/29/github/problem for github install/">GitHub for windows无法启动</a>
+    <h1 class="article-title" itemprop="name">
+      Golang Study（二）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/16/GoClang/Go_Study（二）/" class="archive-article-date">
+  	<time datetime="2019-04-16T14:39:06.659Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Go语言的开发环境搭建"><a href="#Go语言的开发环境搭建" class="headerlink" title="Go语言的开发环境搭建"></a>Go语言的开发环境搭建</h1><h3 id="安装Go-SDK"><a href="#安装Go-SDK" class="headerlink" title="安装Go SDK"></a>安装Go SDK</h3><p>   如果Golang的官网(golang.org)无法直接访问，可以考虑在Golang 中国上下载SDK，下载地址<a href="https://www.golangtc.com/download" target="_blank" rel="noopener">https://www.golangtc.com/download</a><br>   设置完后在命令行中用如下指令验证：</p>
+<ul>
+<li>运行go version来检查是否安装成功</li>
+<li>运行go env可以查看go相关的环境变量</li>
+</ul>
+<h3 id="安装Eclipse"><a href="#安装Eclipse" class="headerlink" title="安装Eclipse"></a>安装Eclipse</h3><ul>
+<li>需要先安装JDK8或更高版本。</li>
+<li>安装Eclipse 4.6 （Neon）或更高版本。</li>
+</ul>
+<a id="more"></a>
+<h3 id="安装GoClipse"><a href="#安装GoClipse" class="headerlink" title="安装GoClipse"></a>安装GoClipse</h3><ul>
+<li><p>在Eclipse中，打开Windows -&gt; Preferences，找到Go，在Go installation中输入Go SDK的%GOROOT%目录；</p>
+</li>
+<li><p>打开Go -&gt; Tools。  对gocode和godef可以点击Download按钮来从GitHub直接下载。</p>
+<p>注意：对guru，直接Download会失败，因为Download时试图去从Golang官网下载，而Golang官网已经被拉黑了。</p>
+<p>不过因为Golang的代码都是托管在GitHub上的，所以我们可以通过下面的地址来下载Go tools的源代码。 <a href="https://github.com/golang/tools下载后，在%GOROOT%/work/src目录下创建golang.org/x的目录结构，并将上一步git" target="_blank" rel="noopener">https://github.com/golang/tools下载后，在%GOROOT%/work/src目录下创建golang.org/x的目录结构，并将上一步git</a> clone的Go tools的tools目录复制到golang.org/x目录下。然后执行如下指令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export GOPATH="&lt;Your GOROOT&gt;/work"</span><br><span class="line">go build golang.org/x/tools/cmd/guru</span><br></pre></td></tr></table></figure>
+<p>执行命令成功后guru.exe就会生成在%GOROOT%/work/bin目录下,最后在Eclipse中设置好guru即可。 </p>
+</li>
+</ul>
+<h3 id="使用出现的问题"><a href="#使用出现的问题" class="headerlink" title="使用出现的问题"></a>使用出现的问题</h3><ul>
+<li><p>如果在go开发中遇到这种报错。 resource does not have a corresponding go package ，其原因有二</p>
+<p>(1). go文件不能直接放在src目录下面。可在src目录下面再建立一个文件夹 ;</p>
+<p>(2). GOPATH是你运行自己项目时，需要调用的环境。与工作空间不能放在同一个目录下。 </p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,52 +216,125 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Golang学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/16/GoClang/Go_Study（二）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/25/Hexo/hello-world/" class="archive-article-date">
-  	<time datetime="2018-04-25T13:49:24.106Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/27/Linux/Linux设置java环境变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何在Linux上自动设置JAVA_HOME环境变量</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/25/Hexo/hello-world/">Hexo-test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Go语言的开发环境搭建"><span class="toc-number">1.</span> <span class="toc-text">Go语言的开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Go-SDK"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装Go SDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Eclipse"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装Eclipse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装GoClipse"><span class="toc-number">1.0.3.</span> <span class="toc-text">安装GoClipse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用出现的问题"><span class="toc-number">1.0.4.</span> <span class="toc-text">使用出现的问题</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -255,8 +357,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
